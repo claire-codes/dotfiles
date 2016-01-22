@@ -8,3 +8,8 @@ set shiftwidth=4
 set expandtab
 " Show line numbers by default
 set number
+
+" Turn syntax highlighting on
+syntax on
+" Wrap at 72 and turn spell checking on
+autocmd Filetype gitcommit spell textwidth=72
