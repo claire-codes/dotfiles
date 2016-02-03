@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Script to add all files/folders to staging except ones that match this file/folder glob.
+ 
+git add .
+git reset $1
+git status

@@ -11,5 +11,5 @@ set number
 
 " Turn syntax highlighting on
 syntax on
-" Wrap at 72 and turn spell checking on
-autocmd Filetype gitcommit spell textwidth=72
+
+execute pathogen#infect()
