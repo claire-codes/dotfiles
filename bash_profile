@@ -5,7 +5,8 @@
 
 BLUE='\[\033[1;34m\]'
 PS_CLEAR='\[\033[0m\]'
-export PS1="${BLUE}[\w]${PS_CLEAR}\n\$ "
+git_branch='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\|\ /`'
+export PS1="${BLUE}[\w] $git_branch ${PS_CLEAR}\n\$ "
 
 # Makes iTerm name tabs helpfully
 if [ $ITERM_SESSION_ID ]; then
