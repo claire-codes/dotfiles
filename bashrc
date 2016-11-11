@@ -8,3 +8,7 @@ jira() {
     echo Opening $1
     open http://jira.com/"$1"
 }
+
+# For npm autocomplete, type:
+# npm completion >> ~/.bashrc
+# And it will put a load of bumph in here to let you tab to autocomplete commands.
