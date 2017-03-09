@@ -1,0 +1,56 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+@bright-text: #d1d5dc;
+@dark-text: #c09194;
+@grey-text: #a19aac;
+
+// Change tree view colours to create WCAG AAA standard contrast
+.list-group li.list-nested-item.selected > .list-item,
+.list-group li.list-nested-item > .list-item,
+.list-group li:not(.list-nested-item).selected,
+.list-group li:not(.list-nested-item),
+.list-tree li.list-nested-item.selected.status-ignored > .list-item,
+.list-tree li.list-nested-item > .list-item,
+.list-tree li:not(.list-nested-item).selected,
+.list-tree li:not(.list-nested-item) {
+    color: @bright-text;
+}
+
+// This is for gitignored files in the tree view.
+// It doesn't quite make AAA standard but it's AA, and is distiguishab;e from the non-gitignored files
+.list-group li.list-nested-item.selected.status-ignored > .list-item,
+.list-group li.list-nested-item.status-ignored > .list-item,
+.list-group li:not(.list-nested-item).selected.status-ignored,
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li.list-nested-item.selected.status-ignored > .list-item,
+.list-tree li.list-nested-item.status-ignored > .list-item,
+.list-tree li:not(.list-nested-item).selected.status-ignored,
+.list-tree li:not(.list-nested-item).status-ignored {
+    color: @dark-text;
+}
+
+atom-text-editor::shadow .comment,
+atom-text-editor::shadow .syntax--punctuation.syntax--definition.syntax--comment {
+  color: @grey-text;
+}
+
+// For some reason my active tabs aren't using the correct colour on my work setup
+.tab-bar .tab .title {
+    color: @dark-text;
+}
+.tab-bar .tab .title.icon-search {
+    color: @grey-text;
+}
+.tab-bar .tab.active[data-type$="Editor"] .title,
+.tab-bar .tab.active[data-type="MarkdownPreviewView"] .title {
+    color: @bright-text;
+}
