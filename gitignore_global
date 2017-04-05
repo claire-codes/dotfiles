@@ -1,0 +1,13 @@
+# This file contains a list of rules that will match files/folders, that you want to exclude globally.
+# It saves you from creating a .gitignore in every personal project and filling it with the same stuff.
+#
+# Create this file in your home directory as a hidden file (.gitignore_global) and set it in your global settings:
+#
+# git config --global core.excludesfiles ~/.gitignore_global
+#
+# In every git repo on your machine from now on, you won't need to repeat the same patterns as are already in the globa file.
+
+.DS_Store
+.sass_cache
+*.swp
+node_modules/
