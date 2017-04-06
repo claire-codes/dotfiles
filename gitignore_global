@@ -6,8 +6,29 @@
 # git config --global core.excludesfiles ~/.gitignore_global
 #
 # In every git repo on your machine from now on, you won't need to repeat the same patterns as are already in the globa file.
+#
+# For more ideas see https://github.com/github/gitignore
 
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Other potential stuff I don't want
 .DS_Store
 .sass_cache
 *.swp
-node_modules/
