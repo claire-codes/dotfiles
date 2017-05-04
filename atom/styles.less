@@ -12,6 +12,8 @@
 @bright-text: #d1d5dc;
 @dark-text: #c09194;
 @grey-text: #a19aac;
+@modified-color: #e2c08d;
+@new-color: #73c990;
 
 // Change tree view colours to create WCAG AAA standard contrast
 .list-group li.list-nested-item.selected > .list-item,
@@ -44,6 +46,12 @@ atom-text-editor::shadow .syntax--punctuation.syntax--definition.syntax--comment
 }
 
 // For some reason my active tabs aren't using the correct colour on my work setup
+.tab-bar .tab .title.status-modified {
+    color: @modified-color;
+}
+.tab-bar .tab .title.status-added {
+    color: @new-color;
+}
 .tab-bar .tab .title {
     color: @dark-text;
 }
