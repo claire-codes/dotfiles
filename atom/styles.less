@@ -62,3 +62,22 @@ atom-text-editor::shadow .syntax--punctuation.syntax--definition.syntax--comment
 .tab-bar .tab.active[data-type="MarkdownPreviewView"] .title {
     color: @bright-text;
 }
+
+// Make scrollbar on treeview and editor more visible
+.editor, .tool-panel {
+    /deep/ ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+
+        &-track {
+          border: 0px;
+          background-color: rgba(255, 0, 187, 0.3) !important;
+        }
+
+        &-thumb {
+          background-color: rgba(255, 0, 187, 1) !important;
+          border: 0px;
+        }
+    }
+}
+
