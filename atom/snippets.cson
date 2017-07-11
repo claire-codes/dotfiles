@@ -2,3 +2,8 @@
   'console.log':
     'prefix': 'log'
     'body': 'console.log(${1:""});'
+
+'.source.scss':
+  'mq':
+    'prefix': 'mq'
+    'body': '@include mq($${1:until}: ${2:tablet})'
