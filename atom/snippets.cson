@@ -7,8 +7,19 @@
   'mq':
     'prefix': 'mq'
     'body': '@include mq($${1:until}: ${2:tablet})'
-
-'.source.scss':
   'height-width':
     'prefix': 'hw'
     'body': 'height: ${1}px;\nwidth: ${2}px;'
+
+'.source.php':
+  'dump and die':
+    'prefix': 'die'
+    'body': 'var_dump(${1}); die();'
+
+'.text.html.php':
+  'translate':
+    'prefix': '__'
+    'body': '<?php echo $this->__(\'${1}\'); ?>'
+  'dump and die':
+    'prefix': 'die'
+    'body': '<?php var_dump(${1}); die(); ?>'
