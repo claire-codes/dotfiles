@@ -3,10 +3,16 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Customised prompt:
+# [directory] | [time] | [git_branch]
+# [new line]
 BLUE='\[\033[1;34m\]'
+YELLOW='\[\033[0;33m\]'
+LIGHT_YELLOW='\[\033[1;33m\]'
 PS_CLEAR='\[\033[0m\]'
-git_branch='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\|\ /`'
-export PS1="${BLUE}[\w] $git_branch ${PS_CLEAR}\n\$ "
+GIT_BRANCH='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\|\ /`'
+
+export PS1="${LIGHT_YELLOW}[\w] | \t $GIT_BRANCH ${PS_CLEAR}\n\$ "
 
 # Makes iTerm name tabs helpfully
 if [ $ITERM_SESSION_ID ]; then
