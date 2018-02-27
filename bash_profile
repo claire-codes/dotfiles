@@ -14,6 +14,13 @@ GIT_BRANCH='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\|\ /`'
 
 export PS1="${LIGHT_YELLOW}[\w] | \t $GIT_BRANCH ${PS_CLEAR}\n\$ "
 
+# Git completion
+# Get the script and save it to ~/.git-completion.bash
+# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Makes iTerm name tabs helpfully
 if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
