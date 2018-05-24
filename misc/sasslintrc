@@ -42,7 +42,8 @@
       {
         "properties": [
           "background",
-          "font"
+          "font",
+          "animation
         ]
       }
     ],
