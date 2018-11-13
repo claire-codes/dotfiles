@@ -1,2 +1,0 @@
-s = status
-plog = log --graph --oneline --decorate
