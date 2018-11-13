@@ -11,3 +11,7 @@ I really like typing `git s` fot `git status`. You can set an alias in your `.ba
 ```
 git config --global alias.s status
 ```
+
+## Git completion
+
+Follow one of the methods in [this StackOverflow answer](https://stackoverflow.com/questions/12399002/how-to-configure-git-bash-command-line-completion).
